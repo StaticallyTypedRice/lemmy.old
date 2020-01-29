@@ -11,5 +11,11 @@
         "ecosystem:cordova"
     ],
     "author": "Apache Cordova Team",
-    "license": "Apache-2.0"
+    "license": "Apache-2.0",
+    "dependencies": {
+        "cordova-android": "^8.1.0",
+        "cordova-ios": "^5.1.1",
+        "cordova-osx": "^5.0.0",
+        "cordova-windows": "^7.0.1"
+    }
 }
