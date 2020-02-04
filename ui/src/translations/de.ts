@@ -116,10 +116,11 @@ export const de = {
     password: 'Passwort',
     verify_password: 'Passwort überprüfen',
     forgot_password: 'Passwort vergessen',
-    reset_password_mail_sent: 'Eine E-Mail wurde geschickt, um dein Passwort zurückzusetzen.',
+    reset_password_mail_sent:
+      'Eine E-Mail wurde geschickt, um dein Passwort zurückzusetzen.',
     password_change: 'Passwort geändert',
     new_password: 'neues Passwort',
-    no_email_setup: "Dieser Server hat E-Mails nicht korrekt eingerichtet.",
+    no_email_setup: 'Dieser Server hat E-Mails nicht korrekt eingerichtet.',
     login: 'Einloggen',
     sign_up: 'Registrieren',
     email: 'E-Mail',
@@ -182,7 +183,8 @@ export const de = {
     community_already_exists: 'Gemeinschaft existiert bereits.',
     community_moderator_already_exists:
       'Gemeinschaft Moderator existiert bereits.',
-    community_follower_already_exists: 'Gemeinschaft Follower existiert bereits.',
+    community_follower_already_exists:
+      'Gemeinschaft Follower existiert bereits.',
     community_user_already_banned: 'Gemeinschaft Nutzer schon gebannt.',
     couldnt_create_post: 'Konnte Beitrag nicht anlegen.',
     couldnt_like_post: 'Konnte Beitrag nicht liken.',

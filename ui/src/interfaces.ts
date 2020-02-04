@@ -41,6 +41,7 @@ export enum UserOperation {
   CreatePrivateMessage,
   EditPrivateMessage,
   GetPrivateMessages,
+  UserJoin,
 }
 
 export enum CommentSortType {
@@ -171,6 +172,7 @@ export interface Post {
   saved?: boolean;
   upvoteLoading?: boolean;
   downvoteLoading?: boolean;
+  duplicates?: Array<Post>;
 }
 
 export interface Comment {
@@ -538,6 +540,7 @@ export interface GetCommunityResponse {
   community: Community;
   moderators: Array<CommunityUser>;
   admins: Array<UserView>;
+  online: number;
 }
 
 export interface CommunityResponse {
@@ -594,6 +597,7 @@ export interface GetPostResponse {
   community: Community;
   moderators: Array<CommunityUser>;
   admins: Array<UserView>;
+  online: number;
 }
 
 export interface SavePostForm {
@@ -627,6 +631,7 @@ export interface SaveCommentForm {
 
 export interface CommentResponse {
   comment: Comment;
+  recipient_ids: Array<number>;
 }
 
 export interface CommentLikeForm {
@@ -658,10 +663,6 @@ export interface CreatePostLikeForm {
   post_id: number;
   score: number;
   auth?: string;
-}
-
-export interface CreatePostLikeResponse {
-  post: Post;
 }
 
 export interface SiteForm {
@@ -775,6 +776,14 @@ export interface PrivateMessageResponse {
   message: PrivateMessage;
 }
 
+export interface UserJoinForm {
+  auth: string;
+}
+
+export interface UserJoinResponse {
+  user_id: number;
+}
+
 export type MessageType =
   | EditPrivateMessageForm
   | LoginForm
@@ -819,7 +828,7 @@ type ResponseType =
   | GetFollowedCommunitiesResponse
   | ListCommunitiesResponse
   | GetPostsResponse
-  | CreatePostLikeResponse
+  | PostResponse
   | GetRepliesResponse
   | GetUserMentionsResponse
   | ListCategoriesResponse
